@@ -4,6 +4,7 @@ node_modules/
 dist/
 bundle/
 coverage/
+release-assets/
 *.log
 npm-debug.log*
 .vscode/mcp.json

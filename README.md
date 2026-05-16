@@ -31,6 +31,14 @@ npm run build
 
 The generated `miku-xlsx2md.html` is the Single-file Web App artifact. It embeds the vendored runtime and is intended to open directly from the local filesystem and run normal conversion without network access.
 
+To stage GitHub Release assets after a build:
+
+```bash
+npm run stage:web-release
+```
+
+`npm run stage:web-release` writes versioned HTML assets and metadata under `release-assets/`. The GitHub Actions workflow `.github/workflows/release-web-assets.yml` runs on `v*` tags, builds and tests the Web App, stages the release assets, and uploads them to the matching GitHub Release.
+
 To refresh the upstream runtime from GitHub Releases:
 
 ```bash
@@ -52,6 +60,8 @@ Run `npm run build` first when `src/js/` or generated HTML has not been created 
 `workplace/` is a local scratch area for reference checkouts, extracted archives, and verification artifacts. Only `workplace/.gitkeep` is tracked.
 
 Generated distribution files are intentionally committed during this migration so release artifacts remain reviewable. Do not hand-edit generated `index.html`, `miku-xlsx2md.html`, or `src/js/`; update source files or the vendored runtime and run `npm run build`.
+
+`release-assets/` is a local staging directory and is ignored by Git.
 
 ## License
 
