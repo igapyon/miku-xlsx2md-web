@@ -41,6 +41,11 @@ This file tracks the Web-side separation work from `miku-xlsx2md` into `miku-xls
 
 ## Verification Log
 
+- [x] 2026-05-17 Web repository verification
+  - `npm run refresh:runtime`: downloaded `miku-xlsx2md-runtime-1.0.0.mjs` from upstream GitHub Release `v1.0.0`
+  - `npm run build:all`: passed, 2 test files / 28 tests
+  - `npm audit --audit-level=moderate`: found 0 vulnerabilities
+  - `git diff --check`: passed
 - [x] `npm run refresh:runtime`
 - [x] `npm run build:all`
   - Passed: 2 test files, 28 tests
