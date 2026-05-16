@@ -9,12 +9,12 @@ This repository owns the browser UI, Single-file Web App generation, local brows
 - Main application repository: <https://github.com/igapyon/miku-xlsx2md>
 - Web App repository: <https://github.com/igapyon/miku-xlsx2md-web>
 
-The Web build uses a vendored upstream runtime generated from the `miku-xlsx2md` core. The vendored runtime files are:
+The Web build uses the upstream runtime asset from the `miku-xlsx2md` GitHub Release. The vendored runtime files are:
 
 - `vendor/miku-xlsx2md-runtime.mjs`
 - `vendor/miku-xlsx2md-runtime.json`
 
-The runtime is committed before release builds so the generated Web App remains offline and reproducible. The Web repository does not read upstream TypeScript source files during normal builds.
+The runtime is downloaded and committed before release builds so the generated Web App remains offline and reproducible. The Web repository does not read upstream TypeScript source files during normal builds.
 
 ## Build
 
@@ -31,13 +31,13 @@ npm run build
 
 The generated `miku-xlsx2md.html` is the Single-file Web App artifact. It embeds the vendored runtime and is intended to open directly from the local filesystem and run normal conversion without network access.
 
-To refresh the upstream runtime from a local checkout:
+To refresh the upstream runtime from GitHub Releases:
 
 ```bash
 npm run refresh:runtime
 ```
 
-Set `XLSX2MD_UPSTREAM_ROOT=/path/to/miku-xlsx2md` when the upstream checkout is not available at `../miku-xlsx2md`.
+Set `XLSX2MD_RUNTIME_VERSION=1.0.0` to download a specific release tag, or `XLSX2MD_RUNTIME_URL=<url>` to download a specific runtime asset URL.
 
 ## Test
 

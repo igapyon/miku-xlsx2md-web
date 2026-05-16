@@ -18,12 +18,12 @@ Product semantics remain upstream-owned by `miku-xlsx2md`: workbook parsing, tab
 
 ## Dependency Decision
 
-`miku-xlsx2md` does not yet expose a published GitHub Release runtime asset comparable to `miku-docx2md-runtime-<version>.mjs`.
+`miku-xlsx2md` now provides a runtime bundle/release asset flow comparable to `miku-docx2md-runtime-<version>.mjs`.
 
-For this Web-side checkpoint, `miku-xlsx2md-web` vendors `vendor/miku-xlsx2md-runtime.mjs`, generated from a local upstream checkout by:
+For this Web-side checkpoint, `miku-xlsx2md-web` vendors `vendor/miku-xlsx2md-runtime.mjs`, refreshed from the upstream GitHub Release by:
 
 ```bash
 npm run refresh:runtime
 ```
 
-Normal Web builds use the committed vendored runtime and do not read upstream source paths. A follow-up remains to switch `refresh:runtime` to a GitHub Release asset after upstream publishes one.
+Use `XLSX2MD_RUNTIME_VERSION=<version>` for a pinned release tag, or `XLSX2MD_RUNTIME_URL=<url>` for a specific runtime asset URL. Normal Web builds use the committed vendored runtime and do not read upstream source paths.
