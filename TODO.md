@@ -12,7 +12,7 @@ This file tracks the Web-side separation work from `miku-xlsx2md` into `miku-xls
 - [x] Move Web-owned source HTML, CSS, browser adapter source, `lht-cmn`, build scripts, and Web smoke fixture into this repository
 - [x] Keep product core semantics in upstream `miku-xlsx2md`
 - [x] Use a vendored upstream runtime artifact at `vendor/miku-xlsx2md-runtime.mjs`
-- [ ] Replace local-checkout runtime refresh with a GitHub Release runtime asset after upstream `miku-xlsx2md` publishes one
+- [x] Replace local-checkout runtime refresh with a GitHub Release runtime asset flow
 - [ ] Clean old Web-only files from upstream `miku-xlsx2md` in a separate main-application-side pass after Web verification
 - [ ] Confirm GitHub Pages and Release asset publication policy for `miku-xlsx2md-web`
 
@@ -37,7 +37,7 @@ This file tracks the Web-side separation work from `miku-xlsx2md` into `miku-xls
 - formula diagnostics
 - workbook export assembly
 - CLI behavior
-- upstream runtime release asset generation
+- upstream runtime release asset generation and publication
 
 ## Verification Log
 
@@ -46,3 +46,7 @@ This file tracks the Web-side separation work from `miku-xlsx2md` into `miku-xls
   - Passed: 2 test files, 28 tests
 - [x] `npm audit --audit-level=moderate`
   - Passed after `npm audit fix` updated the lockfile
+- [x] `npm run refresh:runtime`
+  - Downloaded `miku-xlsx2md-runtime-1.0.0.mjs` from upstream GitHub Release `v1.0.0`
+- [x] `npm run build:all`
+  - Passed after refreshing the vendored runtime: 2 test files, 28 tests
