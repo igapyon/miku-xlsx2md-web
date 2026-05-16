@@ -14,7 +14,9 @@ This file tracks the Web-side separation work from `miku-xlsx2md` into `miku-xls
 - [x] Use a vendored upstream runtime artifact at `vendor/miku-xlsx2md-runtime.mjs`
 - [x] Replace local-checkout runtime refresh with a GitHub Release runtime asset flow
 - [ ] Clean old Web-only files from upstream `miku-xlsx2md` in a separate main-application-side pass after Web verification
-- [ ] Confirm GitHub Pages and Release asset publication policy for `miku-xlsx2md-web`
+- [x] Confirm GitHub Pages publication policy for `miku-xlsx2md-web`
+- [x] Confirm Web HTML GitHub Release asset publication policy for `miku-xlsx2md-web`
+- [x] Add Web HTML GitHub Release asset staging and upload workflow
 
 ## Web-Owned Files
 
@@ -43,6 +45,16 @@ This file tracks the Web-side separation work from `miku-xlsx2md` into `miku-xls
 
 - [x] 2026-05-17 Web repository verification
   - `npm run refresh:runtime`: downloaded `miku-xlsx2md-runtime-1.0.0.mjs` from upstream GitHub Release `v1.0.0`
+  - `npm run build:all`: passed, 2 test files / 28 tests
+  - `npm audit --audit-level=moderate`: found 0 vulnerabilities
+  - `git diff --check`: passed
+- [x] 2026-05-17 GitHub Pages publication policy
+  - GitHub Pages has been enabled for `miku-xlsx2md-web`
+- [x] 2026-05-17 Web HTML GitHub Release asset policy
+  - Web HTML assets should be uploaded to GitHub Releases
+  - `.github/workflows/release-web-assets.yml` stages and uploads release assets on `v*` tags
+- [x] 2026-05-17 Web release asset staging verification
+  - `npm run stage:web-release`: staged `miku-xlsx2md-web-1.0.0.html`, `miku-xlsx2md-web-index-1.0.0.html`, and `miku-xlsx2md-web-1.0.0.json`
   - `npm run build:all`: passed, 2 test files / 28 tests
   - `npm audit --audit-level=moderate`: found 0 vulnerabilities
   - `git diff --check`: passed

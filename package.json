@@ -8,6 +8,7 @@
     "build": "node scripts/build-miku-xlsx2md-web.mjs",
     "test": "vitest run",
     "test:unit": "vitest run",
+    "stage:web-release": "node scripts/stage-web-release-assets.mjs",
     "build:all": "npm run build && npm run test:unit"
   },
   "devDependencies": {
