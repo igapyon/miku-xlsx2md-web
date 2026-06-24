@@ -1,6 +1,6 @@
 {
   "name": "miku-xlsx2md-web",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "private": true,
   "type": "module",
   "scripts": {
@@ -15,5 +15,8 @@
     "jsdom": "^26.0.0",
     "typescript": "^5.7.3",
     "vitest": "^3.0.0"
+  },
+  "overrides": {
+    "esbuild": "0.28.1"
   }
 }
