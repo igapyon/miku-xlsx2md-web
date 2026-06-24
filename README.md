@@ -31,6 +31,15 @@ npm run build
 
 The generated `miku-xlsx2md.html` is the Single-file Web App artifact. It embeds the vendored runtime and is intended to open directly from the local filesystem and run normal conversion without network access.
 
+## GitHub Pages
+
+GitHub Pages is enabled for this Web repository:
+
+- Pages URL: <https://igapyon.github.io/miku-xlsx2md-web/>
+- Pages entry point: `index.html`
+
+`index.html` is the current Pages entry point. Versioned downloadable Web App HTML files are staged separately under `release-assets/` for GitHub Release upload.
+
 To stage GitHub Release assets after a build:
 
 ```bash
