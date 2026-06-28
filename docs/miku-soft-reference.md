@@ -14,7 +14,7 @@ Relevant local skill references used during initialization:
 
 Maintenance reference check:
 
-- Checked date: 2026-06-25
+- Checked date: 2026-06-29
 - Local installed skill commit: unavailable because the installed skill directory is not a Git checkout
 
 Do not copy the shared miku-soft basic documents into this repository. Record project-specific migration notes in `TODO.md` or dedicated docs.
