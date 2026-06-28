@@ -73,3 +73,14 @@ This file tracks the Web-side separation work from `miku-xlsx2md` into `miku-xls
   - `npm run build:all`: passed after refreshing the vendored runtime: 2 test files, 28 tests
   - `npm run stage:web-release`: staged `miku-xlsx2md-web-1.1.0.html`, `miku-xlsx2md-web-index-1.1.0.html`, and `miku-xlsx2md-web-1.1.0.json`
   - `npm audit --audit-level=moderate`: found 0 vulnerabilities after lockfile maintenance
+- [x] 2026-06-29 maintenance verification
+  - `npm run build:all`: passed, 2 test files / 28 tests
+  - `npm run stage:web-release`: staged `miku-xlsx2md-web-1.1.0.html`, `miku-xlsx2md-web-index-1.1.0.html`, and `miku-xlsx2md-web-1.1.0.json`
+  - `npm audit --audit-level=moderate`: found 0 vulnerabilities
+- [x] 2026-06-29 upstream Node runtime refresh
+  - Latest upstream `miku-xlsx2md` release checked: `v1.2.3`
+  - `npm run refresh:runtime`: downloaded `miku-xlsx2md-runtime-1.2.3.mjs` from upstream GitHub Release `v1.2.3`
+  - Updated Web package version to `1.2.3`
+  - `npm run build:all`: passed after refreshing the vendored runtime: 2 test files, 28 tests
+  - `npm run stage:web-release`: staged `miku-xlsx2md-web-1.2.3.html`, `miku-xlsx2md-web-index-1.2.3.html`, and `miku-xlsx2md-web-1.2.3.json`
+  - `npm audit --audit-level=moderate`: found 0 vulnerabilities

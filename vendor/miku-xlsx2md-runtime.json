@@ -1,8 +1,8 @@
 {
   "repository": "igapyon/miku-xlsx2md",
-  "releaseTag": "v1.1.0",
-  "runtimeVersion": "1.1.0",
-  "assetName": "miku-xlsx2md-runtime-1.1.0.mjs",
-  "assetDigest": "sha256:7cf9ee1ae4dd4147a9a911f031629e7bf8272a81df680df51266468a9aff09fd",
-  "browserDownloadUrl": "https://github.com/igapyon/miku-xlsx2md/releases/download/v1.1.0/miku-xlsx2md-runtime-1.1.0.mjs"
+  "releaseTag": "v1.2.3",
+  "runtimeVersion": "1.2.3",
+  "assetName": "miku-xlsx2md-runtime-1.2.3.mjs",
+  "assetDigest": "sha256:a30e64b363dc67e7454259d562691022725c92d3de07af1fe2ed66839861ce91",
+  "browserDownloadUrl": "https://github.com/igapyon/miku-xlsx2md/releases/download/v1.2.3/miku-xlsx2md-runtime-1.2.3.mjs"
 }
